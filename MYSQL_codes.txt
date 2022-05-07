@@ -1,0 +1,20 @@
+#mysql -u root
+create user 'Yogesh'@'localhost' identifies by '12345';
+	Grant all privileges on database or *.tables or * to Yogesh @ localhost;
+flush privileges(to refresh);
+exit;
+create database newdb;
+show databases;
+(to use database)use newdb;
+(to select another database)use ....;
+(to delete database)drop database newdb( database name);
+
+create table tablename(id int primary key, name varchar(50));
+(after table create)desc student(to see description);
+(to add columns)alter table student add age int;
+(to change id)alter table student change id rollno int;
+(to change datatype or character)alter table student change rollno rollno varchar(70);
+(to add primary key)alter table student add primary key (roll no), foreign key(roll no) references student(roll no);(to make foreign there should be primary key)
+ insert into sttudent (id,name,grp) values(1,"hari","A");
+select * from id,name from student where name ="A";
+	   ;
